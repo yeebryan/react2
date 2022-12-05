@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 
-function App() {
+
+function sayGoodbye(){
+  return 'Goodbye'
+}
+
+function displayHeader(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <h2>About Me</h2>
+  )
+}
+
+
+function ImageFrame(){
+  return (
+    <img src = {require('./cat.jpeg')} alt='cat'/>
+  )
+}
+
+function App(){
+  return (
+    <React.Fragment>
+      <p>{sayGoodbye()}</p>
+      {displayHeader()}
+      <ImageFrame/>
+    </React.Fragment>
   );
 }
 
